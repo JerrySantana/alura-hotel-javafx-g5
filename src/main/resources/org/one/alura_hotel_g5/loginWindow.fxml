@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.views.LoginWindowController">
+   <children>
+      <StackPane layoutX="460.0" layoutY="-6.0">
+         <children>
+            <Rectangle fill="#0c8ac7" height="530.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="327.0" />
+            <ImageView fitHeight="540.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/img-hotel-login-.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="65.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/lOGO-50PX.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="149.0" text="Iniciar Sesión" textFill="#0078d7">
+         <font>
+            <Font name="Cambria Bold" size="28.0" />
+         </font>
+      </Label>
+      <VBox layoutX="65.0" layoutY="219.0">
+         <children>
+            <Label text="Usuario">
+               <font>
+                  <Font name="Cambria" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" prefHeight="32.0" prefWidth="324.0" promptText="Ingrese su nombre de usuario">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+         </children>
+      </VBox>
+      <Separator layoutX="65.0" layoutY="292.0" prefHeight="2.0" prefWidth="324.0" />
+      <VBox layoutX="65.0" layoutY="300.0">
+         <children>
+            <Label text="Contraseña">
+               <font>
+                  <Font name="Cambria" size="28.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtContrasena" prefHeight="32.0" prefWidth="324.0" promptText="Ingrese su contraseña">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </VBox>
+      <Separator layoutX="65.0" layoutY="373.0" prefHeight="2.0" prefWidth="324.0" />
+      <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="400.0" mnemonicParsing="false" onAction="#login" prefHeight="44.0" prefWidth="122.0" text="Entrar" textFill="#0078d7">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
