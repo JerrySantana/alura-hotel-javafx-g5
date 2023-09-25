@@ -9,38 +9,28 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="mainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.views.MainWindowController">
-   <children>
-      <ImageView fitHeight="430.0" fitWidth="500.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../images/menu-img.png" />
-         </image>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.MainWindowController">
+   <ImageView fitHeight="430.0" fitWidth="500.0" pickOnBounds="true">
+      <Image url="@../../../images/menu-img.png" />
+   </ImageView>
+   <VBox fx:id="loginVBox" alignment="TOP_CENTER" layoutX="526.0" layoutY="257.0" onMouseClicked="#login">
+      <ImageView fitHeight="120.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <Image url="@../../../images/login.png" />
       </ImageView>
-      <VBox alignment="TOP_CENTER" layoutX="526.0" layoutY="257.0">
-         <children>
-            <ImageView fx:id="loginImage" fitHeight="120.0" fitWidth="80.0" onMouseClicked="#login" onMousePressed="#login" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/login.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <Label fx:id="login" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" onMouseClicked="#login" text="Login" textAlignment="CENTER" textFill="#0983ac">
-               <font>
-                  <Font name="Cambria" size="24.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-         </children>
-      </VBox>
-      <Rectangle fill="#42b3ff" height="51.0" layoutY="429.0" stroke="TRANSPARENT" strokeType="INSIDE" width="640.0" />
-      <ImageView fitHeight="120.0" fitWidth="140.0" layoutX="506.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/aH-150px.png" />
-         </image>
-      </ImageView>
-   </children>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" text="Login" textAlignment="CENTER" textFill="#0983ac">
+         <font>
+            <Font name="Cambria" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </VBox>
+   <Rectangle fill="#42b3ff" height="60.0" layoutX="-5.0" layoutY="430.0" stroke="TRANSPARENT" strokeType="INSIDE" width="650.0" />
+   <ImageView fitHeight="120.0" fitWidth="140.0" layoutX="506.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../images/aH-150px.png" />
+   </ImageView>
 </Pane>

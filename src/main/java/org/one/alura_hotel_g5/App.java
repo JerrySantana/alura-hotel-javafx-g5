@@ -1,6 +1,7 @@
 package org.one.alura_hotel_g5;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,20 +17,26 @@ public class App extends Application {
 
 	@Override
 	public void start(Stage stage) throws IOException {
-		Scene scene = new Scene(loadFXML("mainWindow"));
+		Parent root = FXMLLoader.load(Objects.requireNonNull(App.class.getResource("mainWindow.fxml")));
+		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.getIcons().clear();
-		stage.getIcons().add(new Image(App.class.getResourceAsStream("/images/aH-40px.png")));
+		stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
 		stage.setTitle("Alura Hotel");
 		stage.setResizable(false);
-		stage.show();
 		stage.centerOnScreen();
-
+		stage.show();
 	}
 
-	public static Parent loadFXML(String fxml) throws IOException {
-		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-		return fxmlLoader.load();
+	public static void loadView(String fxml, Stage stage) throws IOException {
+		FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+		Parent root = loader.load();
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.getIcons().clear();
+		stage.setResizable(false);
+		stage.centerOnScreen();
+		stage.show();
 	}
 
 	public static void main(String[] args) {
