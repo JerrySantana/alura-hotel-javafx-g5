@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@SuppressWarnings("DuplicatedCode")
 public class AdminWindowController {
 	private Stage stage;
 	
@@ -34,8 +35,20 @@ public class AdminWindowController {
 				throw new RuntimeException(e);
 			}
 			stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
-
         });
+	}
+
+	@FXML
+	protected void makeReservation() {
+		hbRegister.setOnMouseClicked((EventHandler<Event>) event -> {
+			try {
+				stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+				App.loadView("registerWindow", stage);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/calendario.png"))));
+		});
 	}
 
 	@FXML

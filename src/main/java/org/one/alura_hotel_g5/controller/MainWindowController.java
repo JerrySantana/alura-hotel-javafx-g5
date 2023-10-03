@@ -10,6 +10,7 @@ import org.one.alura_hotel_g5.App;
 import java.io.IOException;
 import java.util.Objects;
 
+@SuppressWarnings("DuplicatedCode")
 public class MainWindowController {
 	private Stage stage;
 

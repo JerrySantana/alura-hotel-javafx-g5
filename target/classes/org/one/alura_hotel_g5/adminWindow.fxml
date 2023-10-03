@@ -41,7 +41,7 @@
       </ImageView>
       <Separator layoutY="150.0" prefHeight="45.0" prefWidth="201.0" />
    </Pane>
-   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0">
+   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>

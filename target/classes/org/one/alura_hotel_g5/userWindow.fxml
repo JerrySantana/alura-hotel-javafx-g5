@@ -8,84 +8,103 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0"
-      prefWidth="944.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.one.alura_hotel_g5.controller.AdminWindowController">
-   <ImageView fx:id="btnLogout" fitHeight="35.0" fitWidth="36.0" layoutX="895.0" layoutY="14.0"
-              onMouseClicked="#logOut" pickOnBounds="true" preserveRatio="true">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.UserWindowController">
+   <VBox fx:id="btnLogout" alignment="CENTER" layoutX="826.0" layoutY="14.0" onMouseClicked="#logOut">
+      <children>
+         <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <Image url="@../../../images/cerrar-sesion 32-px.png" />
+         </ImageView>
+         <Label text="Cerrar sesión">
+            <font>
+               <Font name="Cambria" size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Label>
+      </children>
       <cursor>
-         <Cursor fx:constant="HAND"/>
-      </cursor>
-      <Image url="@../../../images/cerrar-sesion 32-px.png"/>
-   </ImageView>
-   <Rectangle fill="#0c8ac7" height="609.0" stroke="WHITE" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0"
-              width="257.0"/>
-   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" x="50.0" y="58.0">
-      <Image url="@../../../images/aH-150px.png"/>
-   </ImageView>
-   <Separator layoutX="26.0" layoutY="219.0" prefHeight="2.0" prefWidth="201.0"/>
-   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0">
-      <cursor>
-         <Cursor fx:constant="HAND"/>
+         <Cursor fx:constant="HAND" />
       </cursor>
       <effect>
-         <Blend/>
+         <Blend />
+      </effect>
+   </VBox>
+   <Rectangle fill="#0c8ac7" height="620.0" stroke="WHITE" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="257.0" />
+   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" x="50.0" y="58.0">
+      <Image url="@../../../images/aH-150px.png" />
+   </ImageView>
+   <Separator layoutX="26.0" layoutY="219.0" prefHeight="2.0" prefWidth="201.0" />
+   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+      <effect>
+         <Blend />
       </effect>
       <ImageView fitHeight="43.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
          <cursor>
-            <Cursor fx:constant="HAND"/>
+            <Cursor fx:constant="HAND" />
          </cursor>
-         <Image url="@../../../images/icon-reservas.png"/>
+         <Image url="@../../../images/icon-reservas.png" />
       </ImageView>
       <Label text="Regsitrar reserva" textFill="WHITE">
          <font>
-            <Font name="Cambria" size="24.0"/>
+            <Font name="Cambria" size="24.0" />
          </font>
          <cursor>
-            <Cursor fx:constant="HAND"/>
+            <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
    </HBox>
    <HBox fx:id="hbSearch" alignment="CENTER" layoutX="14.0" layoutY="312.0">
       <cursor>
-         <Cursor fx:constant="HAND"/>
+         <Cursor fx:constant="HAND" />
       </cursor>
       <effect>
-         <Blend/>
+         <Blend />
       </effect>
       <ImageView fitHeight="30.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../../images/icon-buscar.png"/>
+         <Image url="@../../../images/icon-buscar.png" />
       </ImageView>
       <Label text="Realizar busqueda" textFill="WHITE">
          <font>
-            <Font name="Cambria" size="24.0"/>
+            <Font name="Cambria" size="24.0" />
          </font>
       </Label>
    </HBox>
-   <Pane layoutX="257.0" layoutY="87.0" prefHeight="121.0" prefWidth="688.0">
-      <Rectangle fill="#76bbdf" height="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="688.0"/>
+   <Pane layoutX="257.0" layoutY="87.0" prefHeight="121.0" prefWidth="706.0">
+      <Rectangle fill="#76bbdf" height="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
       <Label layoutX="168.0" layoutY="14.0" text="Administración Hotel Alura" textFill="WHITE">
          <font>
-            <Font name="Cambria" size="30.0"/>
+            <Font name="Cambria" size="30.0" />
          </font>
       </Label>
       <Label fx:id="lblFecha" layoutX="14.0" layoutY="61.0" text="La fecha es:" textFill="WHITE">
          <font>
-            <Font size="30.0"/>
+            <Font size="30.0" />
          </font>
       </Label>
    </Pane>
-   <Label layoutX="271.0" layoutY="237.0" text="Bienvenido Administrador">
-      <font>
-         <Font name="Cambria Bold" size="26.0"/>
-      </font>
-   </Label>
-   <Label layoutX="295.0" layoutY="280.0">
-      <font>
-         <Font size="20.0"/>
-      </font>
-   </Label>
+   <Pane layoutX="271.0" layoutY="237.0">
+      <children>
+         <Label text="Bienvenido Usuario">
+            <font>
+               <Font name="Cambria Bold" size="26.0" />
+            </font>
+         </Label>
+         <Label layoutX="24.0" layoutY="43.0" text="Sistema de administración de hotel. Controla y administra de forma&#10;óptima y fácil el flujo de reservas y de huéspedes del hotel.&#10;&#10;Esta herramineta te permitirá llevar un control completo y detallado&#10;de las reservas y huéspedes dentro del hotel; tendrás acceso a&#10;herramientas especiales para tareas específicas, como:&#10;&#10;-&#9;Registro de reservas y huéspedes.&#10;-&#9;Edición de reservas y huéspedes existentes.&#10;-&#9;Eliminación de registros.">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
 </Pane>

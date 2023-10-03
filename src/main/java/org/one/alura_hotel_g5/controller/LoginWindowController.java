@@ -30,7 +30,15 @@ public class LoginWindowController {
 					throw new RuntimeException(e);
 				}
 				stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/perfil-del-usuario.png"))));
-            }
+            } else if (txtUsuario.getText().equals("user") && txtContrasena.getText().equals("user")) {
+				try {
+					stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+					App.loadView("userWindow", stage);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+				stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/perfil-del-usuario.png"))));
+			}
         });
 	}
 }
