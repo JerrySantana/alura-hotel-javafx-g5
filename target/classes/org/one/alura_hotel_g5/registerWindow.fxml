@@ -6,95 +6,84 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.RegisterWindowController">
-   <children>
-      <Pane layoutX="428.0" prefHeight="650.0" prefWidth="482.0">
-         <children>
+<TabPane fx:id="ventanaReservas" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.RegisterWindowController">
+   <Tab fx:id="reservaTab" closable="false" text="Reserva">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="910.0">
+         <Pane layoutX="428.0" prefHeight="650.0" prefWidth="482.0">
             <Rectangle fill="#0c8ac7" height="672.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="504.0" />
             <ImageView fitHeight="409.0" fitWidth="500.0" layoutX="51.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/reservas-img-3.png" />
-               </image>
+               <Image url="@../../../images/reservas-img-3.png" />
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="166.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/Ha-100px.png" />
-               </image>
+               <Image url="@../../../images/Ha-100px.png" />
             </ImageView>
-         </children>
-      </Pane>
-      <Pane prefHeight="650.0" prefWidth="482.0">
-         <children>
+         </Pane>
+         <Pane prefHeight="650.0" prefWidth="482.0">
             <Label layoutX="101.0" layoutY="59.0" text="Sistema de Reservas" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="24.0" />
                </font>
             </Label>
             <Pane layoutX="68.0" layoutY="137.0">
-               <children>
-                  <DatePicker fx:id="dpCheckin" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </DatePicker>
-                  <Label text="Fecha de Check-in">
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
+               <DatePicker fx:id="dpCheckin" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </DatePicker>
+               <Label text="Fecha de Check-in">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
             </Pane>
             <Separator layoutX="60.0" layoutY="220.0" prefWidth="300.0" />
             <Pane layoutX="69.0" layoutY="237.0">
-               <children>
-                  <DatePicker fx:id="dpCheckout" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </DatePicker>
-                  <Label text="Fecha de Check-out">
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
+               <DatePicker fx:id="dpCheckout" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </DatePicker>
+               <Label text="Fecha de Check-out">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
             </Pane>
             <Separator layoutX="60.0" layoutY="323.0" prefWidth="300.0" />
             <Pane layoutX="68.0" layoutY="390.0">
-               <children>
-                  <Label text="Costo de la reserva">
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="lblCosto" layoutY="22.0">
-                     <font>
-                        <Font name="Ebrima" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
+               <Label text="Costo de la reserva">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <Label fx:id="lblCosto" layoutY="22.0">
+                  <font>
+                     <Font name="Ebrima" size="24.0" />
+                  </font>
+               </Label>
             </Pane>
             <Pane layoutX="68.0" layoutY="452.0">
-               <children>
-                  <Label text="Forma de Pago">
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="cbFormaPago" layoutY="35.0" prefWidth="289.0" promptText="Elige tu forma de pago">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-               </children>
+               <Label text="Forma de Pago">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <ComboBox fx:id="cbFormaPago" layoutY="35.0" prefWidth="289.0" promptText="Elige la forma de pago">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </ComboBox>
             </Pane>
-            <Button fx:id="btnSiguiente" layoutX="255.0" layoutY="528.0" mnemonicParsing="false" text="Siguiente" textFill="#0c8ac7">
+            <Button fx:id="btnSiguiente" layoutX="255.0" layoutY="528.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
@@ -109,7 +98,106 @@
                   <Font name="Cambria Bold" size="18.0" />
                </font>
             </Button>
-         </children>
+         </Pane>
       </Pane>
-   </children>
-</Pane>
+   </Tab>
+   <Tab fx:id="huespedTab" closable="false" text="Huesped">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="910.0">
+         <Pane prefHeight="650.0" prefWidth="489.0">
+            <Rectangle fill="#0c8ac7" height="679.0" layoutY="-14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="489.0" />
+            <ImageView fitHeight="502.0" fitWidth="479.0" layoutX="8.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../../images/registro.png" />
+            </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="104.0" layoutX="193.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../../images/Ha-100px.png" />
+            </ImageView>
+         </Pane>
+         <Pane layoutX="486.0" prefHeight="650.0" prefWidth="424.0">
+            <Label layoutX="88.0" layoutY="14.0" text="Registro de huéspedes" textFill="#0c8ac7">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="64.0" layoutY="50.0" prefHeight="90.0" prefWidth="300.0">
+               <Label text="Nombre(s)">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="txtNombre" layoutX="7.0" layoutY="22.0" prefHeight="33.0" prefWidth="285.0">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </TextArea>
+            </Pane>
+            <Separator layoutX="60.0" layoutY="140.0" prefWidth="300.0" />
+            <Pane layoutX="64.0" layoutY="150.0" prefHeight="90.0" prefWidth="300.0">
+               <Label text="Apellido(s)">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="txtApellido" layoutX="7.0" layoutY="22.0" prefHeight="33.0" prefWidth="285.0">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </TextArea>
+            </Pane>
+            <Separator layoutX="60.0" layoutY="240.0" prefWidth="300.0" />
+            <Pane layoutX="64.0" layoutY="330.0" prefWidth="292.0">
+               <Label text="Nacionalidad">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <ComboBox fx:id="cbNacionalidad" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0" promptText="Solo mayores de 18 años" />
+            </Pane>
+            <Pane layoutX="64.0" layoutY="410.0">
+               <Label text="Teléfono">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="txtTelefono" layoutX="7.0" layoutY="22.0" prefHeight="26.0" prefWidth="289.0">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </TextArea>
+            </Pane>
+            <Button fx:id="btnSiguienteH" layoutX="255.0" layoutY="590.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente" textFill="#0c8ac7">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAtrasH" layoutX="68.0" layoutY="590.0" mnemonicParsing="false" onAction="#exit" text="Atras" textFill="#0c8ac7">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Pane layoutX="64.0" layoutY="250.0">
+               <Label text="Fecha de nacimiento">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <DatePicker fx:id="dpNacimiento" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0" />
+            </Pane>
+            <Separator layoutX="60.0" layoutY="320.0" prefWidth="300.0" />
+            <Separator layoutX="60.0" layoutY="400.0" prefWidth="300.0" />
+            <Pane layoutX="64.0" layoutY="510.0">
+               <Label text="Número de reserva">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+               <Label fx:id="lblReserva" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="289.0">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+               </Label>
+            </Pane>
+            <Separator layoutX="60.0" layoutY="500.0" prefWidth="300.0" />
+         </Pane>
+      </Pane>
+   </Tab>
+</TabPane>

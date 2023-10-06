@@ -18,7 +18,15 @@ import java.util.Objects;
 public class RegisterWindowController {
 
     private Stage stage;
-
+    @FXML private TabPane ventanaReservas;
+    @FXML private TextArea txtNombre;
+    @FXML private TextArea txtApellido;
+    @FXML private ComboBox<String> cbNacionalidad;
+    @FXML private TextArea txtTelefono;
+    @FXML private Button btnSiguienteH;
+    @FXML private Button btnAtrasH;
+    @FXML private DatePicker dpNacimiento;
+    @FXML private Label lblReserva;
     @FXML private DatePicker dpCheckin;
     @FXML private DatePicker dpCheckout;
     @FXML private Label lblCosto;
@@ -29,15 +37,21 @@ public class RegisterWindowController {
 
     @FXML
     protected void exit() {
-        btnAtras.setOnAction(event -> {
-            try {
-                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                App.loadView("loginWindow", stage);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
-        });
+        var tab = ventanaReservas.getSelectionModel().getSelectedItem();
+        if (tab.getId().equals("reservaTab")) {
+            btnAtras.setOnAction(event -> {
+                try {
+                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    App.loadView("loginWindow", stage);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
+            });
+        } else {
+            btnAtrasH.setOnAction(event -> ventanaReservas.getSelectionModel().selectPrevious());
+        }
+
     }
 
     @FXML
@@ -64,11 +78,30 @@ public class RegisterWindowController {
     }
 
     @FXML
+    void siguiente() {
+        var tab = ventanaReservas.getSelectionModel().getSelectedItem();
+        if (tab.getId().equals("reservaTab")) {
+            btnSiguiente.setOnAction(event -> ventanaReservas.getSelectionModel().selectNext());
+        } else {
+            System.out.println(ventanaReservas.getSelectionModel().getSelectedItem().getId());
+        }
+    }
+
+    @FXML
     void initialize() {
         ObservableList<String> formasPago = FXCollections.observableArrayList();
+        ObservableList<String> nacionalidades = FXCollections.observableArrayList();
         formasPago.addAll("Tarjeta de crédito", "Tarjeta de débito", "Efectivo");
-        cbFormaPago.setItems(formasPago);
-        Callback<DatePicker, DateCell> dayCellFactory = dp -> new DateCell() {
+        nacionalidades.addAll("afgana", "alemana", "árabe", "argentina", "australiana", "belga", "boliviana",
+                "brasileña", "camboyana", "canadiense", "chilena", "china", "colombiana", "coreana", "costarricense",
+                "cubana", "danesa", "ecuatoriana", "egipcia", "salvadoreña", "escocesa", "española", "estadounidense",
+                "estonia", "etiope", "filipina", "finlandesa", "francesa", "galesa", "griega", "guatemalteca",
+                "haitiana", "holandesa", "hondureña", "indonesa", "inglesa", "iraquí", "iraní", "irlandesa", "israelí",
+                "italiana", "japonesa", "jordana", "laosiana", "letonesa", "malaya", "marroquí", "mexicana",
+                "nicaragüense", "noruega", "neozelandesa", "panameña", "paraguaya", "peruana", "polaca", "portuguesa",
+                "puertorriqueño", "dominicana", "rumana", "rusa", "sueca", "suiza", "tailandesa", "taiwanesa", "turca",
+                "ucraniana", "uruguaya", "venezolana", "vietnamita");
+        Callback<DatePicker, DateCell> reservaDayFactory = dp -> new DateCell() {
             @Override
             public void updateItem(LocalDate item, boolean empty) {
                 super.updateItem(item, empty);
@@ -82,8 +115,23 @@ public class RegisterWindowController {
                 }
             }
         };
+        Callback<DatePicker, DateCell> nacimientoDayFactory = dp -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                this.setDisable(false);
+                this.setBackground(null);
+                if (item.isAfter(LocalDate.now().minusYears(18))) {
+                    this.setDisable(true);
+                }
+            }
+        };
 
-        dpCheckin.setDayCellFactory(dayCellFactory);
-        dpCheckout.setDayCellFactory(dayCellFactory);
+        cbFormaPago.setItems(formasPago);
+        cbNacionalidad.setItems(nacionalidades);
+        dpNacimiento.setDayCellFactory(nacimientoDayFactory);
+        dpCheckin.setDayCellFactory(reservaDayFactory);
+        dpCheckout.setDayCellFactory(reservaDayFactory);
+        siguiente();
     }
 }

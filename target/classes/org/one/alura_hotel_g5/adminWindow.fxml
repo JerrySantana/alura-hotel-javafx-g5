@@ -14,25 +14,23 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.AdminWindowController">
    <VBox fx:id="btnLogout" alignment="CENTER" layoutX="834.0" layoutY="14.0">
-      <children>
-         <ImageView fitHeight="35.0" fitWidth="36.0" onMouseClicked="#logOut" pickOnBounds="true" preserveRatio="true">
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-            <Image url="@../../../images/cerrar-sesion 32-px.png" />
-         </ImageView>
-         <Label alignment="CENTER" contentDisplay="CENTER" text="Cerra sesión">
-            <font>
-               <Font name="Cambria" size="18.0" />
-            </font>
-         </Label>
-      </children>
       <cursor>
-         <Cursor fx:constant="HAND" />
+         <Cursor fx:constant="HAND"/>
       </cursor>
       <effect>
-         <Blend />
+         <Blend/>
       </effect>
+      <ImageView fitHeight="35.0" fitWidth="36.0" onMouseClicked="#logOut" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+         <Image url="@../../../images/cerrar-sesion 32-px.png"/>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Cerrar sesión">
+         <font>
+            <Font name="Cambria" size="18.0"/>
+         </font>
+      </Label>
    </VBox>
    <Rectangle fill="#0c8ac7" height="615.0" stroke="WHITE" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="257.0" />
    <Pane layoutX="26.0" layoutY="58.0">

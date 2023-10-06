@@ -14,28 +14,26 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.UserWindowController">
    <VBox fx:id="btnLogout" alignment="CENTER" layoutX="826.0" layoutY="14.0" onMouseClicked="#logOut">
-      <children>
-         <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-            <Image url="@../../../images/cerrar-sesion 32-px.png" />
-         </ImageView>
-         <Label text="Cerrar sesión">
-            <font>
-               <Font name="Cambria" size="18.0" />
-            </font>
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-         </Label>
-      </children>
       <cursor>
-         <Cursor fx:constant="HAND" />
+         <Cursor fx:constant="HAND"/>
       </cursor>
       <effect>
-         <Blend />
+         <Blend/>
       </effect>
+      <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+         <Image url="@../../../images/cerrar-sesion 32-px.png"/>
+      </ImageView>
+      <Label text="Cerrar sesión">
+         <font>
+            <Font name="Cambria" size="18.0"/>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Label>
    </VBox>
    <Rectangle fill="#0c8ac7" height="620.0" stroke="WHITE" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="257.0" />
    <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" x="50.0" y="58.0">
@@ -94,17 +92,16 @@
       </Label>
    </Pane>
    <Pane layoutX="271.0" layoutY="237.0">
-      <children>
-         <Label text="Bienvenido Usuario">
-            <font>
-               <Font name="Cambria Bold" size="26.0" />
-            </font>
-         </Label>
-         <Label layoutX="24.0" layoutY="43.0" text="Sistema de administración de hotel. Controla y administra de forma&#10;óptima y fácil el flujo de reservas y de huéspedes del hotel.&#10;&#10;Esta herramineta te permitirá llevar un control completo y detallado&#10;de las reservas y huéspedes dentro del hotel; tendrás acceso a&#10;herramientas especiales para tareas específicas, como:&#10;&#10;-&#9;Registro de reservas y huéspedes.&#10;-&#9;Edición de reservas y huéspedes existentes.&#10;-&#9;Eliminación de registros.">
-            <font>
-               <Font size="18.0" />
-            </font>
-         </Label>
-      </children>
+      <Label text="Bienvenido Usuario">
+         <font>
+            <Font name="Cambria Bold" size="26.0"/>
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="43.0"
+             text="Sistema de administración de hotel. Controla y administra de forma&#10;óptima y fácil el flujo de reservas y de huéspedes del hotel.&#10;&#10;Esta herramineta te permitirá llevar un control completo y detallado&#10;de las reservas y huéspedes dentro del hotel; tendrás acceso a&#10;herramientas especiales para tareas específicas, como:&#10;&#10;-&#9;Registro de reservas y huéspedes.&#10;-&#9;Edición de reservas y huéspedes existentes.&#10;-&#9;Eliminación de registros.">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Label>
    </Pane>
 </Pane>
