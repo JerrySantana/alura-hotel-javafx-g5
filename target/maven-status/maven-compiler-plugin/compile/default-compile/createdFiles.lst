@@ -1,8 +1,10 @@
 org\one\alura_hotel_g5\App.class
 org\one\alura_hotel_g5\controller\RegisterWindowController.class
 org\one\alura_hotel_g5\controller\RegisterWindowController$2.class
+org\one\alura_hotel_g5\controller\SearchWindowController.class
 org\one\alura_hotel_g5\controller\LoginWindowController.class
 org\one\alura_hotel_g5\controller\AdminWindowController.class
+org\one\alura_hotel_g5\controller\EditUserWindowController.class
 org\one\alura_hotel_g5\controller\RegisterWindowController$1.class
 org\one\alura_hotel_g5\controller\MainWindowController.class
 org\one\alura_hotel_g5\controller\UserWindowController.class

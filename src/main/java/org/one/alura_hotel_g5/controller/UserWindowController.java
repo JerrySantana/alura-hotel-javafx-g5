@@ -29,12 +29,10 @@ public class UserWindowController {
     protected void logOut() {
         btnLogout.setOnMouseClicked((EventHandler<Event>) event -> {
             try {
-                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                App.loadView("loginWindow", stage);
+                App.salir(stage, event);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
         });
     }
 
@@ -48,6 +46,19 @@ public class UserWindowController {
                 throw new RuntimeException(e);
             }
             stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/calendario.png"))));
+        });
+    }
+
+    @FXML
+    protected void search() {
+        hbSearch.setOnMouseClicked((EventHandler<Event>) event -> {
+            try {
+                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                App.loadView("searchWindow", stage);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/lupa2.png"))));
         });
     }
 

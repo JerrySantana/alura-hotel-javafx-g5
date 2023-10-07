@@ -18,6 +18,7 @@ import java.util.Objects;
 public class RegisterWindowController {
 
     private Stage stage;
+
     @FXML private TabPane ventanaReservas;
     @FXML private TextArea txtNombre;
     @FXML private TextArea txtApellido;
@@ -41,17 +42,14 @@ public class RegisterWindowController {
         if (tab.getId().equals("reservaTab")) {
             btnAtras.setOnAction(event -> {
                 try {
-                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                    App.loadView("loginWindow", stage);
+                    App.salir(stage, event);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("/images/aH-40px.png"))));
             });
         } else {
             btnAtrasH.setOnAction(event -> ventanaReservas.getSelectionModel().selectPrevious());
         }
-
     }
 
     @FXML

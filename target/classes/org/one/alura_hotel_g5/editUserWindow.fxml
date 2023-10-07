@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.EditUserWindowController">
+    <TableView layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="298.0">
+      <columns>
+          <TableColumn editable="false" prefWidth="60.0" text="Id" />
+          <TableColumn editable="false" prefWidth="130.0" text="Tipo de Usuario" />
+          <TableColumn editable="false" prefWidth="107.0" text="Activo/Inactivo" />
+      </columns>
+    </TableView>
+    <ImageView fitHeight="50.0" fitWidth="40.0" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../images/aH-40px.png" />
+    </ImageView>
+    <Label layoutX="116.0" layoutY="37.0" text="Administración de usuarios" textFill="#0c8ac7">
+        <font>
+          <Font name="Cambria Bold" size="18.0" />
+        </font>
+    </Label>
+    <Button fx:id="btnSalir" layoutX="14.0" layoutY="312.0" mnemonicParsing="false" onAction="#exit" onMousePressed="#exit" text="Salir">
+        <font>
+          <Font name="Cambria Bold" size="18.0" />
+        </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <Group layoutX="335.0" layoutY="113.0">
+        <Button fx:id="btnEditar" layoutX="11.0" mnemonicParsing="false" text="Editar">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Button fx:id="btnEliminar" layoutY="70.0" mnemonicParsing="false" text="Eliminar">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Button fx:id="btnAnadir" layoutX="8.0" layoutY="140.0" mnemonicParsing="false" text="Añadir">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+    </Group>
+</Pane>

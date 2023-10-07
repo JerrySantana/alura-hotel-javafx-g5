@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="ventanaBusqueda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="910.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.SearchWindowController">
+   <Tab closable="false" text="Buscar reservas">
+      <Pane prefHeight="570.0" prefWidth="910.0">
+         <Group layoutX="51.0" layoutY="23.0">
+            <ImageView fitHeight="107.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../../images/Ha-100px.png" />
+            </ImageView>
+            <Label layoutX="226.0" layoutY="37.0" text="Sistema de Búsqeda de Reservas" textFill="#0c8ac7">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Group layoutX="386.0" layoutY="84.0">
+               <Button fx:id="btnBuscarR" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" text="Buscar">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <TextArea fx:id="txtBuscarR" prefHeight="60.0" prefWidth="300.0" promptText="Buscar por Id, CheckIn, CheckOut, Forma de pago, # Habitación, CheckOut realizado.">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextArea>
+            </Group>
+         </Group>
+         <TableView fx:id="tableReservas" layoutX="15.0" layoutY="178.0" prefHeight="299.0" prefWidth="880.0">
+            <columns>
+               <TableColumn prefWidth="50.0" text="Id" />
+               <TableColumn prefWidth="150.0" text="Fecha Check-In" />
+               <TableColumn prefWidth="150.0" text="Fecha Check-Out" />
+               <TableColumn minWidth="6.0" prefWidth="90.0" text="Costo" />
+               <TableColumn prefWidth="100.0" text="Forma de Pago" />
+               <TableColumn editable="false" prefWidth="140.0" text="Check-In/Check-Out" />
+               <TableColumn minWidth="0.0" prefWidth="95.0" text="# de Habitación" />
+               <TableColumn prefWidth="103.0" text="Tipo Habitación" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+         <Group layoutX="685.0" layoutY="486.0">
+            <Button fx:id="btnEliminarR" layoutX="114.0" mnemonicParsing="false" text="Eliminar">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEditarR" mnemonicParsing="false" text="Editar">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </Group>
+         <Button fx:id="btnSalirR" layoutX="14.0" layoutY="486.0" mnemonicParsing="false" onAction="#exit" onMousePressed="#exit" text="Salir">
+            <font>
+               <Font name="Cambria Bold" size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </Pane>
+   </Tab>
+   <Tab closable="false" text="Buscar huéspedes">
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <Group layoutX="51.0" layoutY="23.0">
+            <ImageView fitHeight="107.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../../images/Ha-100px.png" />
+            </ImageView>
+            <Label layoutX="226.0" layoutY="37.0" text="Sistema de Búsqeda de Huéspedes" textFill="#0c8ac7">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Group layoutX="386.0" layoutY="84.0">
+               <Button fx:id="btnBuscarH" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" text="Buscar">
+                  <font>
+                     <Font name="Cambria Bold" size="18.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <TextArea fx:id="txtBuscarH" prefHeight="60.0" prefWidth="300.0" promptText="Buscar por Id, Apellido, Id de Reserva">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextArea>
+            </Group>
+         </Group>
+         <TableView fx:id="tableHuespedes" layoutX="15.0" layoutY="178.0" prefHeight="299.0" prefWidth="880.0">
+            <columns>
+               <TableColumn prefWidth="50.0" text="Id" />
+               <TableColumn prefWidth="130.0" text="Nombre" />
+               <TableColumn prefWidth="130.0" text="Apellido" />
+               <TableColumn minWidth="6.0" prefWidth="200.0" text="Fecha Nacimiento" />
+               <TableColumn prefWidth="170.0" text="Nacionalidad" />
+               <TableColumn editable="false" prefWidth="140.0" text="Id de Reserva" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+         <Group layoutX="685.0" layoutY="486.0">
+            <Button fx:id="btnEliminarH" layoutX="114.0" mnemonicParsing="false" text="Eliminar">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEditarH" mnemonicParsing="false" text="Editar">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </Group>
+         <Button fx:id="btnSalirH" layoutX="14.0" layoutY="486.0" mnemonicParsing="false" onAction="#exit" onMousePressed="#exit" text="Salir">
+            <font>
+               <Font name="Cambria Bold" size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </Pane>
+   </Tab>
+</TabPane>
