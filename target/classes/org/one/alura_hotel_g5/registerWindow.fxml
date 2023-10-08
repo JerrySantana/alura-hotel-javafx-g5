@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:id="ventanaReservas" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.RegisterWindowController">
+<TabPane fx:id="ventanaReservas" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.windowController.RegisterWindowController">
    <Tab fx:id="reservaTab" closable="false" text="Reserva">
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="910.0">
          <Pane layoutX="428.0" prefHeight="650.0" prefWidth="482.0">

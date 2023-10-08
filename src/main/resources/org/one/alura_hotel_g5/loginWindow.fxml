@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.LoginWindowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.windowController.LoginWindowController">
    <StackPane layoutX="460.0" layoutY="-6.0">
       <Rectangle fill="#0c8ac7" height="540.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="330.0" />
       <ImageView fitHeight="540.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true">

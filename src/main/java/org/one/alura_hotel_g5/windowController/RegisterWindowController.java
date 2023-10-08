@@ -1,23 +1,22 @@
-package org.one.alura_hotel_g5.controller;
+package org.one.alura_hotel_g5.windowController;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.one.alura_hotel_g5.App;
+import org.one.alura_hotel_g5.model.FormaPago;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @SuppressWarnings("DuplicatedCode")
 public class RegisterWindowController {
 
     private Stage stage;
+    private double costo;
 
     @FXML private TabPane ventanaReservas;
     @FXML private TextArea txtNombre;
@@ -31,7 +30,7 @@ public class RegisterWindowController {
     @FXML private DatePicker dpCheckin;
     @FXML private DatePicker dpCheckout;
     @FXML private Label lblCosto;
-    @FXML private ComboBox<String> cbFormaPago;
+    @FXML private ComboBox<FormaPago> cbFormaPago;
     @FXML private Button btnSiguiente;
     @FXML private Button btnAtras;
     @FXML private Button btnCalcular;
@@ -55,7 +54,7 @@ public class RegisterWindowController {
     @FXML
     protected void calcularCosto() {
         btnCalcular.setOnAction(event -> {
-            var costo = 0.00;
+            costo = 0.00;
             Alert alert = new Alert(Alert.AlertType.ERROR);
             if (LocalDate.from(dpCheckout.getValue()).isBefore(LocalDate.from(dpCheckin.getValue()))) {
                 lblCosto.setText("$" + costo + " (MXN)");
@@ -87,9 +86,9 @@ public class RegisterWindowController {
 
     @FXML
     void initialize() {
-        ObservableList<String> formasPago = FXCollections.observableArrayList();
+        ObservableList<FormaPago> formasPago = FXCollections.observableArrayList();
         ObservableList<String> nacionalidades = FXCollections.observableArrayList();
-        formasPago.addAll("Tarjeta de crédito", "Tarjeta de débito", "Efectivo");
+        formasPago.addAll(FormaPago.values());
         nacionalidades.addAll("afgana", "alemana", "árabe", "argentina", "australiana", "belga", "boliviana",
                 "brasileña", "camboyana", "canadiense", "chilena", "china", "colombiana", "coreana", "costarricense",
                 "cubana", "danesa", "ecuatoriana", "egipcia", "salvadoreña", "escocesa", "española", "estadounidense",

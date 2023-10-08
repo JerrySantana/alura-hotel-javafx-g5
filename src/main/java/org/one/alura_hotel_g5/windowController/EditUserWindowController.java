@@ -1,4 +1,4 @@
-package org.one.alura_hotel_g5.controller;
+package org.one.alura_hotel_g5.windowController;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

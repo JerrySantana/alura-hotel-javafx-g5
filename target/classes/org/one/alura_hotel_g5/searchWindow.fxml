@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:id="ventanaBusqueda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="910.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.controller.SearchWindowController">
+<TabPane fx:id="ventanaBusqueda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="910.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.windowController.SearchWindowController">
    <Tab closable="false" text="Buscar reservas">
       <Pane prefHeight="570.0" prefWidth="910.0">
          <Group layoutX="51.0" layoutY="23.0">
@@ -49,7 +49,6 @@
                <TableColumn prefWidth="150.0" text="Fecha Check-Out" />
                <TableColumn minWidth="6.0" prefWidth="90.0" text="Costo" />
                <TableColumn prefWidth="100.0" text="Forma de Pago" />
-               <TableColumn editable="false" prefWidth="140.0" text="Check-In/Check-Out" />
                <TableColumn minWidth="0.0" prefWidth="95.0" text="# de Habitación" />
                <TableColumn prefWidth="103.0" text="Tipo Habitación" />
             </columns>
@@ -117,8 +116,9 @@
                <TableColumn prefWidth="50.0" text="Id" />
                <TableColumn prefWidth="130.0" text="Nombre" />
                <TableColumn prefWidth="130.0" text="Apellido" />
-               <TableColumn minWidth="6.0" prefWidth="200.0" text="Fecha Nacimiento" />
-               <TableColumn prefWidth="170.0" text="Nacionalidad" />
+               <TableColumn minWidth="6.0" prefWidth="150.0" text="Fecha Nacimiento" />
+               <TableColumn prefWidth="150.0" text="Nacionalidad" />
+               <TableColumn prefWidth="140.0" text="Teléfono" />
                <TableColumn editable="false" prefWidth="140.0" text="Id de Reserva" />
             </columns>
             <columnResizePolicy>
