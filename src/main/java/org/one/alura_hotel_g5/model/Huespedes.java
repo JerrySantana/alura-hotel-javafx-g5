@@ -1,17 +1,17 @@
 package org.one.alura_hotel_g5.model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class Huespedes {
     private Integer id;
     private String nombre;
     private String apellido;
-    private LocalDate fechaNacimiento;
+    private Date fechaNacimiento;
     private String nacionalidad;
     private String telefono;
     private Integer idReserva;
 
-    public Huespedes(String nombre, String apellido, LocalDate fechaNacimiento, String nacionalidad, String telefono) {
+    public Huespedes(String nombre, String apellido, Date fechaNacimiento, String nacionalidad, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -19,7 +19,7 @@ public class Huespedes {
         this.telefono = telefono;
     }
 
-    public Huespedes(Integer id, String nombre, String apellido, LocalDate fechaNacimiento, String nacionalidad, String telefono, Integer idReserva) {
+    public Huespedes(Integer id, String nombre, String apellido, Date fechaNacimiento, String nacionalidad, String telefono, Integer idReserva) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -53,7 +53,7 @@ public class Huespedes {
         return apellido;
     }
 
-    public LocalDate getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 

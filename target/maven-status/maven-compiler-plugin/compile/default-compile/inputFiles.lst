@@ -3,12 +3,17 @@ D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\model\Usuarios
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\MainWindowController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\LoginWindowController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\RegisterWindowController.java
+D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\controller\ReservasController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\model\Habitacion.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\App.java
+D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\dao\HuespedesDAO.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\EditUserWindowController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\SearchWindowController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\model\Huespedes.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\model\Reservas.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\UserWindowController.java
+D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\dao\ReservasDAO.java
+D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\factory\ConnectionFactory.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\security\Security.java
+D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\controller\HuespedesController.java
 D:\Documentos\alura-hotel-g5\src\main\java\org\one\alura_hotel_g5\windowController\AdminWindowController.java

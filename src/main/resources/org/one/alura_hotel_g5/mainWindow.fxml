@@ -13,7 +13,7 @@
    <ImageView fitHeight="430.0" fitWidth="500.0" pickOnBounds="true">
       <Image url="@../../../images/menu-img.png" />
    </ImageView>
-   <VBox fx:id="loginVBox" alignment="TOP_CENTER" layoutX="526.0" layoutY="257.0" onMouseClicked="#login">
+   <VBox fx:id="loginVBox" alignment="TOP_CENTER" layoutX="526.0" layoutY="257.0" onMouseClicked="#login" onMousePressed="#login">
       <ImageView fitHeight="120.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
          <cursor>
             <Cursor fx:constant="HAND" />

@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class EditUserWindowController {
 
-    private Stage stage;
+    protected Stage stage;
 
     @FXML private Button btnEditar;
     @FXML private Button btnEliminar;

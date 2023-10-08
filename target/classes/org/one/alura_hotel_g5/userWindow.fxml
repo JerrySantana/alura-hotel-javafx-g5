@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.windowController.UserWindowController">
-   <VBox fx:id="btnLogout" alignment="CENTER" layoutX="826.0" layoutY="14.0" onMouseClicked="#logOut">
+   <VBox fx:id="btnLogout" alignment="CENTER" layoutX="826.0" layoutY="14.0" onMouseClicked="#logOut" onMousePressed="#logOut">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -40,7 +40,7 @@
       <Image url="@../../../images/aH-150px.png" />
    </ImageView>
    <Separator layoutX="26.0" layoutY="219.0" prefHeight="2.0" prefWidth="201.0" />
-   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation">
+   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation" onMousePressed="#makeReservation">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -62,7 +62,7 @@
          </cursor>
       </Label>
    </HBox>
-   <HBox fx:id="hbSearch" alignment="CENTER" layoutX="14.0" layoutY="312.0" onMouseClicked="#search">
+   <HBox fx:id="hbSearch" alignment="CENTER" layoutX="14.0" layoutY="312.0" onMouseClicked="#search" onMousePressed="#search">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>

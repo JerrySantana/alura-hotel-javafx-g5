@@ -33,8 +33,8 @@
                   <Font name="Cambria Bold" size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="68.0" layoutY="137.0">
-               <DatePicker fx:id="dpCheckin" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
+            <Pane layoutX="68.0" layoutY="120.0">
+               <DatePicker fx:id="dpCheckin" layoutY="25.0" prefHeight="35.0" prefWidth="289.0">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
@@ -45,9 +45,9 @@
                   </font>
                </Label>
             </Pane>
-            <Separator layoutX="60.0" layoutY="220.0" prefWidth="300.0" />
-            <Pane layoutX="69.0" layoutY="237.0">
-               <DatePicker fx:id="dpCheckout" layoutY="24.0" prefHeight="35.0" prefWidth="289.0">
+            <Separator layoutX="60.0" layoutY="190.0" prefWidth="300.0" />
+            <Pane layoutX="69.0" layoutY="200.0">
+               <DatePicker fx:id="dpCheckout" layoutY="25.0" prefHeight="35.0" prefWidth="289.0">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
@@ -58,7 +58,7 @@
                   </font>
                </Label>
             </Pane>
-            <Separator layoutX="60.0" layoutY="323.0" prefWidth="300.0" />
+            <Separator layoutX="60.0" layoutY="270.0" prefWidth="300.0" />
             <Pane layoutX="68.0" layoutY="390.0">
                <Label text="Costo de la reserva">
                   <font>
@@ -83,21 +83,38 @@
                   </cursor>
                </ComboBox>
             </Pane>
-            <Button fx:id="btnSiguiente" layoutX="255.0" layoutY="528.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente" textFill="#0c8ac7">
+            <Button fx:id="btnSiguiente" layoutX="255.0" layoutY="528.0" mnemonicParsing="false" onAction="#siguiente" onMouseClicked="#siguiente" onMousePressed="#siguiente" text="Siguiente" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button fx:id="btnCalcular" layoutX="140.0" layoutY="342.0" mnemonicParsing="false" onAction="#calcularCosto" text="Calcular costo">
+            <Button fx:id="btnCalcular" layoutX="140.0" layoutY="340.0" mnemonicParsing="false" onAction="#calcularCosto" onMouseClicked="#calcularCosto" onMousePressed="#calcularCosto" text="Calcular costo">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button fx:id="btnAtras" layoutX="68.0" layoutY="528.0" mnemonicParsing="false" onAction="#exit" text="Atras" textFill="#0c8ac7">
+            <Button fx:id="btnAtras" layoutX="68.0" layoutY="528.0" mnemonicParsing="false" onAction="#exit" onMouseClicked="#exit" onMousePressed="#exit" text="Atras" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
+            <ComboBox fx:id="cbTipoHabitacion" layoutX="208.0" layoutY="290.0" prefWidth="150.0" promptText="Tipo de Habitacion">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <ComboBox fx:id="cbNumeroHabitacion" layoutX="68.0" layoutY="290.0" prefHeight="25.0" prefWidth="108.0" promptText="Habitación">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
          </Pane>
       </Pane>
    </Tab>
@@ -150,7 +167,10 @@
                      <Font name="Cambria Bold" size="18.0" />
                   </font>
                </Label>
-               <ComboBox fx:id="cbNacionalidad" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0" />
+               <ComboBox fx:id="cbNacionalidad" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></ComboBox>
             </Pane>
             <Pane layoutX="64.0" layoutY="410.0">
                <Label text="Teléfono">
@@ -164,15 +184,21 @@
                   </font>
                </TextArea>
             </Pane>
-            <Button fx:id="btnSiguienteH" layoutX="255.0" layoutY="590.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente" textFill="#0c8ac7">
+            <Button fx:id="btnSiguienteH" layoutX="255.0" layoutY="590.0" mnemonicParsing="false" onAction="#siguiente" onMouseClicked="#siguiente" onMousePressed="#siguiente" text="Siguiente" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button fx:id="btnAtrasH" layoutX="68.0" layoutY="590.0" mnemonicParsing="false" onAction="#exit" text="Atras" textFill="#0c8ac7">
+            <Button fx:id="btnAtrasH" layoutX="68.0" layoutY="590.0" mnemonicParsing="false" onAction="#exit" onMouseClicked="#exit" onMousePressed="#exit" text="Atras" textFill="#0c8ac7">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Pane layoutX="64.0" layoutY="250.0">
                <Label text="Fecha de nacimiento">
@@ -180,7 +206,10 @@
                      <Font name="Cambria Bold" size="18.0" />
                   </font>
                </Label>
-               <DatePicker fx:id="dpNacimiento" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0" promptText="Solo mayores de edad" />
+               <DatePicker fx:id="dpNacimiento" layoutX="7.0" layoutY="22.0" prefHeight="36.0" prefWidth="285.0" promptText="Solo mayores de edad">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></DatePicker>
             </Pane>
             <Separator layoutX="60.0" layoutY="320.0" prefWidth="300.0" />
             <Separator layoutX="60.0" layoutY="400.0" prefWidth="300.0" />

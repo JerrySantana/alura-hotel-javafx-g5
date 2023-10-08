@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 
 <TabPane fx:id="ventanaBusqueda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="910.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.one.alura_hotel_g5.windowController.SearchWindowController">
-   <Tab closable="false" text="Buscar reservas">
+   <Tab fx:id="reservasTab" closable="false" text="Reservas">
       <Pane prefHeight="570.0" prefWidth="910.0">
          <Group layoutX="51.0" layoutY="23.0">
             <ImageView fitHeight="107.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
@@ -42,19 +42,16 @@
                </TextArea>
             </Group>
          </Group>
-         <TableView fx:id="tableReservas" layoutX="15.0" layoutY="178.0" prefHeight="299.0" prefWidth="880.0">
+         <TableView fx:id="tableReservas" layoutX="85.0" layoutY="175.0" prefHeight="299.0" prefWidth="741.0">
             <columns>
-               <TableColumn prefWidth="50.0" text="Id" />
-               <TableColumn prefWidth="150.0" text="Fecha Check-In" />
-               <TableColumn prefWidth="150.0" text="Fecha Check-Out" />
-               <TableColumn minWidth="6.0" prefWidth="90.0" text="Costo" />
-               <TableColumn prefWidth="100.0" text="Forma de Pago" />
-               <TableColumn minWidth="0.0" prefWidth="95.0" text="# de Habitación" />
-               <TableColumn prefWidth="103.0" text="Tipo Habitación" />
+               <TableColumn fx:id="columnIdR" editable="false" prefWidth="50.0" resizable="false" text="Id" />
+               <TableColumn fx:id="columnCheckIn" editable="false" prefWidth="150.0" resizable="false" text="Fecha Check-In" />
+               <TableColumn fx:id="columnCheckOut" prefWidth="150.0" resizable="false" text="Fecha Check-Out" />
+               <TableColumn fx:id="columnCosto" minWidth="6.0" prefWidth="90.0" resizable="false" text="Costo" />
+               <TableColumn fx:id="columnFormaPago" prefWidth="100.0" resizable="false" text="Forma de Pago" />
+               <TableColumn fx:id="columnHabitacion" editable="false" minWidth="0.0" prefWidth="95.0" resizable="false" text="# de Habitación" />
+               <TableColumn fx:id="columnTipoHabitacion" prefWidth="103.0" resizable="false" text="Tipo Habitación" />
             </columns>
-            <columnResizePolicy>
-               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-            </columnResizePolicy>
          </TableView>
          <Group layoutX="685.0" layoutY="486.0">
             <Button fx:id="btnEliminarR" layoutX="114.0" mnemonicParsing="false" text="Eliminar">
@@ -84,7 +81,7 @@
          </Button>
       </Pane>
    </Tab>
-   <Tab closable="false" text="Buscar huéspedes">
+   <Tab fx:id="huespedesTab" closable="false" text="Huéspedes">
       <Pane prefHeight="200.0" prefWidth="200.0">
          <Group layoutX="51.0" layoutY="23.0">
             <ImageView fitHeight="107.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
@@ -111,19 +108,16 @@
                </TextArea>
             </Group>
          </Group>
-         <TableView fx:id="tableHuespedes" layoutX="15.0" layoutY="178.0" prefHeight="299.0" prefWidth="880.0">
+         <TableView fx:id="tableHuespedes" layoutX="14.0" layoutY="177.0" prefHeight="299.0" prefWidth="883.0">
             <columns>
-               <TableColumn prefWidth="50.0" text="Id" />
-               <TableColumn prefWidth="130.0" text="Nombre" />
-               <TableColumn prefWidth="130.0" text="Apellido" />
-               <TableColumn minWidth="6.0" prefWidth="150.0" text="Fecha Nacimiento" />
-               <TableColumn prefWidth="150.0" text="Nacionalidad" />
-               <TableColumn prefWidth="140.0" text="Teléfono" />
-               <TableColumn editable="false" prefWidth="140.0" text="Id de Reserva" />
+               <TableColumn fx:id="columnIdH" editable="false" prefWidth="50.0" resizable="false" text="Id" />
+               <TableColumn fx:id="columnNombre" editable="false" prefWidth="130.0" resizable="false" text="Nombre" />
+               <TableColumn fx:id="columnApellido" editable="false" prefWidth="130.0" resizable="false" text="Apellido" />
+               <TableColumn fx:id="columnNacimiento" editable="false" minWidth="6.0" prefWidth="150.0" resizable="false" text="Fecha Nacimiento" />
+               <TableColumn fx:id="columnNacionalidad" prefWidth="150.0" resizable="false" text="Nacionalidad" />
+               <TableColumn fx:id="columnTelefono" prefWidth="130.0" resizable="false" text="Teléfono" />
+               <TableColumn fx:id="columnIdReserva" editable="false" prefWidth="140.0" resizable="false" text="Id de Reserva" />
             </columns>
-            <columnResizePolicy>
-               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-            </columnResizePolicy>
          </TableView>
          <Group layoutX="685.0" layoutY="486.0">
             <Button fx:id="btnEliminarH" layoutX="114.0" mnemonicParsing="false" text="Eliminar">

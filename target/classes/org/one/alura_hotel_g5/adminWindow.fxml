@@ -39,7 +39,7 @@
       </ImageView>
       <Separator layoutY="150.0" prefHeight="45.0" prefWidth="201.0" />
    </Pane>
-   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation">
+   <HBox fx:id="hbRegister" alignment="CENTER" layoutX="9.0" layoutY="253.0" onMouseClicked="#makeReservation" onMousePressed="#makeReservation">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -61,7 +61,7 @@
          </cursor>
       </Label>
    </HBox>
-   <HBox fx:id="hbSearch" alignment="CENTER" layoutX="14.0" layoutY="312.0" onMouseClicked="#search">
+   <HBox fx:id="hbSearch" alignment="CENTER" layoutX="14.0" layoutY="312.0" onMouseClicked="#search" onMousePressed="#search">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -102,7 +102,7 @@
          </font>
       </Label>
    </Pane>
-   <HBox fx:id="hbUsers" layoutX="14.0" layoutY="363.0" onMouseClicked="#administrate" prefHeight="35.0" prefWidth="220.0">
+   <HBox fx:id="hbUsers" layoutX="14.0" layoutY="363.0" onMouseClicked="#administrate" onMousePressed="#administrate" prefHeight="35.0" prefWidth="220.0">
       <effect>
          <Blend />
       </effect>
